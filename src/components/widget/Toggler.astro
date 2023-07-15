@@ -1,0 +1,25 @@
+---
+
+---
+
+<div class="bg-blues-500 w-10 mx-auto mt-2.5 cursor-pointer rounded-3xl toggler dark:bg-yellows-500">
+<div class="bg-yellows-500 w-5 h-5 scale-40 rounded-3xl transition-transform dark:bg-blues-500"></div>
+</div>
+
+<script>
+    let flag = true;
+    const toggler = document.querySelector('.toggler');
+    const toggleDark = () => {
+      toggler.addEventListener('click', () => {
+        const html = document.documentElement;
+        toggler.children[0].classList.toggle('translate-x-5');
+        if (flag) {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
+        flag = !flag;
+      });
+    };
+    toggleDark();
+  </script>

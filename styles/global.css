@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  bg-dark {
+   @apply bg-night-700;
+  }
+  .h1 {
+    @apply text-4xl lg:text-5xl font-bold lg:tracking-tight font-cursive text-blacks-700 dark:text-whites-700;
+  }
+  .text-color {
+    @apply  animate-[animate8345_9s_linear_infinite] ;
+    background: linear-gradient(to right, #2d60ec, #3ccfda);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .wrap {
+    @apply flex items-center justify-center py-10 px-4 mb-5 mt-5;
+  }
+  .circle {
+    @apply w-[300px] h-[300px] overflow-hidden animate-[morph_5s_linear_infinite] rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%];
+    background: transparent;
+  }
+  .circle img {
+    @apply w-full;
+  }
+  .circle1 {
+    @apply w-[250px] h-[250px] overflow-hidden animate-[morph_5s_linear_infinite] rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%];
+    background: transparent;
+  }
+  
+  
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+}

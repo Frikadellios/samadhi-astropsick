@@ -1,0 +1,24 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsxImportSource": "react",
+    "types": ["@astrojs/image/client"],
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/components/utils/*"],
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
+  }
+}

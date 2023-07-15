@@ -1,0 +1,92 @@
+---
+
+---
+<div class="container reveal">
+<svg class="w-10 h-10" viewBox="0 0 110 33" fill="none" xmlns="http://www.w3.org/2000/svg" width="110" height="33">
+    <path d="M0.734436 32.0433C28.1185 20.8631 58.321 14.4162 87.6991 11.2271C93.6909 10.5767 99.7856 10.1329 105.681 8.82643C106.565 8.6305 107.666 8.45126 108.257 7.71167" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="arrow2-1"></path>
+    <path d="M105.295 7.55369C103.251 6.41332 98.0697 4.73081 97.3989 2.01718C97.3762 1.92544 97.3095 1.31771 97.3374 1.37859C98.1737 3.20315 97.6004 7.32036 97.4208 9.32238C97.3735 9.84973 96.396 15.3811 96.8612 15.1485C101.235 12.9619 105.361 8.83254 109.442 6.05271" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="arrow2-2"></path>
+  </svg>
+</div>
+
+<style>
+
+@-webkit-keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 112.72496032714844px;
+    stroke-dasharray: 112.72496032714844px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 112.72496032714844px;
+  }
+}
+
+@keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 112.72496032714844px;
+    stroke-dasharray: 112.72496032714844px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 112.72496032714844px;
+  }
+}
+
+.arrow2-1 {
+  -webkit-animation: animate-svg-stroke-1 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+          animation: animate-svg-stroke-1 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 42.052093505859375px;
+    stroke-dasharray: 42.052093505859375px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 42.052093505859375px;
+  }
+}
+
+@keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 42.052093505859375px;
+    stroke-dasharray: 42.052093505859375px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 42.052093505859375px;
+  }
+}
+
+.arrow2-2 {
+  -webkit-animation: animate-svg-stroke-2 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both;
+          animation: animate-svg-stroke-2 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both;
+}
+
+</style>
+
+<script>
+  function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+</script>
